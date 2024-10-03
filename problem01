@@ -1,0 +1,13 @@
+def sum_even_fibonacci(limit):
+    a, b = 1, 2  # Initial Fibonacci terms
+    even_sum = 0
+
+    while a <= limit:
+        if a % 2 == 0:  # Check if the term is even
+            even_sum += a
+        a, b = b, a + b  # Generate the next Fibonacci term
+
+    return even_sum
+
+result = sum_even_fibonacci(4000000)
+print(result)
